@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Railway Ticket Tracker — Bangladesh Railway | Joy Pramanik</title>
+<meta name="description" content="Search Bangladesh Railway trains, check sample fares and seat availability, and save your trips. Built by Joy Pramanik.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="nav">
+  <a class="logo" href="#top">🚆 Railway Ticket Tracker</a>
+  <nav>
+    <a href="#search">Search</a>
+    <a href="#routes">Popular Routes</a>
+    <a href="#trips">My Trips</a>
+    <a href="#about">About</a>
+  </nav>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <p class="eyebrow">Bangladesh Railway • Demo Tracker</p>
+    <h1>Find your train.<br>Track your ticket.</h1>
+    <p class="lede">Search trains between Dhaka, Rajshahi, Rangpur, Bogura and Chattogram, compare sample fares by class, and save the trips you travel most.</p>
+    <p class="note">⚠️ Sample schedule &amp; fares for demo — always check the live fare and availability on the official e-ticket site before you buy.</p>
+    <div class="cta">
+      <a class="btn" href="#search">Search trains</a>
+      <a class="btn ghost" href="https://eticket.railway.gov.bd/" target="_blank" rel="noopener">Official e-Ticket ↗</a>
+    </div>
+  </section>
+
+  <section id="search" class="section">
+    <h2>Search trains</h2>
+    <form id="search-form" class="search-card">
+      <div class="field">
+        <label for="from">From</label>
+        <select id="from" required></select>
+      </div>
+      <div class="field">
+        <label for="to">To</label>
+        <select id="to" required></select>
+      </div>
+      <div class="field">
+        <label for="date">Travel date</label>
+        <input type="date" id="date" required>
+      </div>
+      <div class="field">
+        <label for="travel-class">Class</label>
+        <select id="travel-class">
+          <option value="Shovon Chair">Shovon Chair</option>
+          <option value="Shovon">Shovon</option>
+          <option value="AC Chair">AC Chair</option>
+          <option value="Snigdha">Snigdha</option>
+          <option value="AC Berth">AC Berth</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="passengers">Passengers</label>
+        <input type="number" id="passengers" min="1" max="4" value="1">
+      </div>
+      <button class="btn" type="submit">Search trains</button>
+    </form>
+    <p id="search-meta" class="muted"></p>
+    <div id="results" class="cards"></div>
+  </section>
+
+  <section id="routes" class="section">
+    <h2>Popular routes</h2>
+    <p class="muted">Tap a route to fill the search form.</p>
+    <div class="chips" id="route-chips"></div>
+  </section>
+
+  <section id="trips" class="section">
+    <h2>My Trips &amp; Alerts</h2>
+    <p class="muted">Saved trips stay in your browser (localStorage) — nothing is sent to a server.</p>
+    <div id="saved-trips" class="cards"></div>
+    <h3>Seat alerts</h3>
+    <div id="saved-alerts" class="cards"></div>
+  </section>
+
+  <section id="about" class="section">
+    <h2>About this project</h2>
+    <p>Built by <strong>Joy Pramanik</strong>, a final-year CSE student at Southeast University, Dhaka, using HTML, CSS and JavaScript — no framework, no backend. Train data in this demo is a sample timetable; fares and seat counts are estimates for learning and demo use.</p>
+    <p>🔗 <a href="https://github.com/joypramanik02" target="_blank" rel="noopener">GitHub: joypramanik02</a> · <a href="https://joypramanik02.github.io/portfolio-website-/" target="_blank" rel="noopener">Portfolio</a> · <a href="mailto:joypk827@gmail.com">joypk827@gmail.com</a></p>
+  </section>
+</main>
+
+<footer>
+  <p>© <span id="year">2026</span> Joy Pramanik · Dhaka, Bangladesh · Demo data only — check eticket.railway.gov.bd for live booking.</p>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>
